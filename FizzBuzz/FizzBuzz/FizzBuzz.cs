@@ -1,4 +1,5 @@
 ﻿using FizzBuzz.Abstractions;
+using System.Text;
 
 namespace FizzBuzz
 {
@@ -14,7 +15,25 @@ namespace FizzBuzz
 
         public string GetResultString(int start, int end)
         {
-            return string.Empty;
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = start; i <= end; i++)
+            {
+                string result = null;
+
+                foreach (var rule in rules)
+                {
+                    if (rule.IsValid(i))
+                    {
+                        result = rule.GetResult();
+                        break;
+                    }
+                }
+
+                sb.AppendLine(result ?? i.ToString());
+            }
+
+            return sb.ToString();
         }
     }
 }

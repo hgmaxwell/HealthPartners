@@ -18,12 +18,12 @@ namespace FizzBuzz
             fizzRule = Substitute.For<IRule>();
             fizzRule.IsValid(Arg.Any<int>()).Returns(x => x.Arg<int>() % 3 == 0);
             fizzRule.GetResult().Returns("Fizz");
-            fizzBuzzRule.Order.Returns(2);
+            fizzRule.Order.Returns(2);
 
             buzzRule = Substitute.For<IRule>();
             buzzRule.IsValid(Arg.Any<int>()).Returns(x => x.Arg<int>() % 5 == 0);
             buzzRule.GetResult().Returns("Buzz");
-            fizzBuzzRule.Order.Returns(3);
+            buzzRule.Order.Returns(3);
 
             fizzBuzzRule = Substitute.For<IRule>();
             fizzBuzzRule.IsValid(Arg.Any<int>()).Returns(x => x.Arg<int>() % 15 == 0);
@@ -92,7 +92,7 @@ namespace FizzBuzz
                 "91", "92", "Fizz", "94", "Buzz", "Fizz", "97", "98", "Fizz", "Buzz"
             };
 
-            var expectedResultString = string.Join(Environment.NewLine, expectedResults);
+            var expectedResultString = string.Join(Environment.NewLine, expectedResults) + Environment.NewLine;
 
             var result = fizzBuzz.GetResultString(1, 100);
 

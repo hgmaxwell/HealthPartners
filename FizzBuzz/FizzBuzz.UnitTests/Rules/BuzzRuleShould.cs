@@ -22,7 +22,7 @@ namespace FizzBuzz.Rules
         [Test]
         [TestCase(3, ExpectedResult = false)]
         [TestCase(5, ExpectedResult = true)]
-        [TestCase(15, ExpectedResult = false)]
+        [TestCase(15, ExpectedResult = true)]
         public bool ReturnIsValidForValuesDivisibleByFive(int value)
         {
             return buzzRule.IsValid(value);

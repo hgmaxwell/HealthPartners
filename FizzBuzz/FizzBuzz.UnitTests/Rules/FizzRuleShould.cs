@@ -22,7 +22,7 @@ namespace FizzBuzz.Rules
         [Test]
         [TestCase(3, ExpectedResult = true)]
         [TestCase(5, ExpectedResult = false)]
-        [TestCase(15, ExpectedResult = false)]
+        [TestCase(15, ExpectedResult = true)]
         public bool ReturnIsValidForValuesDivisibleByThree(int value)
         {
             return fizzRule.IsValid(value);
