@@ -1,4 +1,6 @@
-﻿namespace FizzBuzz.Rules
+﻿using FluentAssertions;
+
+namespace FizzBuzz.Rules
 {
     [TestFixture]
     public class BuzzRuleShould
