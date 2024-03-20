@@ -1,5 +1,7 @@
 # HealthPartners
 
+[![Build and Test](https://github.com/hgmaxwell/HealthPartners/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/hgmaxwell/HealthPartners/actions/workflows/dotnet.yml)
+
 The coding challenge we would like you to complete is: 
 “To create a solution to the Fizz Buzz problem, using C#, that is built using Reflection and which demonstrates a clean, Test Driven approach using SOLID design principles.”
 Again the problem you are looking to solve is:
