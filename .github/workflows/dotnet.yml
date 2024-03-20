@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
+  build_and_test:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,16 +20,5 @@ jobs:
       run: dotnet restore ./FizzBuzz/FizzBuzz.sln
     - name: Build
       run: dotnet build --no-restore ./FizzBuzz/FizzBuzz.sln
-
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Setup .NET
-      uses: actions/setup-dotnet@v4
-      with:
-        dotnet-version: 8.0.x
     - name: Test
       run: dotnet test --no-build ./FizzBuzz/FizzBuzz.UnitTests/FizzBuzz.UnitTests.csproj
