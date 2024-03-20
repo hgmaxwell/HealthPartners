@@ -19,7 +19,7 @@ namespace FizzBuzz
 
             for (int i = start; i <= end; i++)
             {
-                string result = null;
+                string? result = null;
 
                 foreach (var rule in rules)
                 {
